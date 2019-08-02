@@ -1,0 +1,5 @@
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Domain\bin\Debug\BNK.Domain.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Domain\bin\Debug\BNK.Domain.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Domain\obj\Debug\BNK.Domain.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Domain\obj\Debug\BNK.Domain.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Domain\obj\Debug\BNK.Domain.csprojResolveAssemblyReference.cache

@@ -1,0 +1,9 @@
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\bin\Debug\BNK.Repository.cs.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\bin\Debug\BNK.Repository.cs.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\bin\Debug\BNK.Domain.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\bin\Debug\BNK.Infra.Data.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\bin\Debug\BNK.Domain.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\bin\Debug\BNK.Infra.Data.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\obj\Debug\BNK.Repository.csprojResolveAssemblyReference.cache
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\obj\Debug\BNK.Repository.cs.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Repository.cs\obj\Debug\BNK.Repository.cs.pdb
