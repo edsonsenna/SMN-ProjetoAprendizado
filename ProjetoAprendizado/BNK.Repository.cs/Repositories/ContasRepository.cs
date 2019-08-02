@@ -17,32 +17,12 @@ namespace BNK.Repository.Repositories
 
         public enum Procedures
         {
-            BNK_InsOperacao,
-            BNK_AttOperacao,
             BNK_SelOperacoesCliente
         }
 
         public void Deposita(decimal valor)
         {
-            bool ins_op = false;
-
-            Connect();
-            ExecuteProcedure(Procedures.BNK_InsOperacao.ToString());
-            AddParameter("@Cod_TipoOperacao", 2);
-            AddParameter("@Num_SeqlContaOrigem", 1);
-            AddParameter("@Num_ValorOperacao", valor);
-
-            ins_op = ExecuteNonQueryWithReturn() == 0 ? true : ins_op;
-                    
-
-            if (ins_op)
-            {
-                ExecuteProcedure(Procedures.BNK_AttOperacao.ToString());
-                AddParameter("@Cod_TipoOperacao", 2);
-                AddParameter("@Num_SeqlContaOrigem", 1);
-                AddParameter("@Num_ValorOperacao", valor);
-                ExecuteNoReturn();
-            }
+            
 
            
 
@@ -73,22 +53,24 @@ namespace BNK.Repository.Repositories
 
             using (var leitor = ExecuteReader())
             {
-                while (leitor.HasRows)
+  
+                while (leitor.Read())
                 {
-                    while (leitor.Read())
+                   
+                    operacoes.Add(new OperacaoDto
                     {
-                        operacoes.Add(new OperacaoDto
-                        {
-                            Num_SeqlOperacao = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlOperacao")),
-                            Num_SeqlContaOrigem = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlContaOrigem")),
-                            Num_SeqlContaDestino = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlContaDestino")),
-                            Num_ValorOperacao = leitor.GetDecimal(leitor.GetOrdinal("Num_ValorOperacao")),
-                            Cod_TipoOperacao = leitor.GetByte(leitor.GetOrdinal("Num_SeqlContaOrigem")),
-                            Date_DataOperacao = leitor.GetDateTime(leitor.GetOrdinal("Date_DataOperacao"))
-                        });
-                    }
-                    leitor.NextResult();
+                        Num_SeqlOperacao = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlOperacao")),
+                        Num_SeqlContaOrigem = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlContaOrigem")),
+                        Num_SeqlContaDestino = leitor.IsDBNull(leitor.GetOrdinal("Num_SeqlContaDestino")) ? 0 : 
+                                                leitor.GetInt32(leitor.GetOrdinal("Num_SeqlContaDestino")),
+                        Num_ValorOperacao = leitor.GetDecimal(leitor.GetOrdinal("Num_ValorOperacao")),
+                        Cod_TipoOperacao = leitor.GetByte(leitor.GetOrdinal("Cod_TipoOperacao")),
+                        Date_DataOperacao = leitor.GetDateTime(leitor.GetOrdinal("Date_DataOperacao"))
+                    });
+                    
+                       
                 }
+                
                
             }
                 

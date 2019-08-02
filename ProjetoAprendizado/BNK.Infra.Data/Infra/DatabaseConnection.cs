@@ -66,6 +66,7 @@ namespace BNK.Infra.Data.Infra
             }
             catch (SqlException ex)
             {
+                Console.WriteLine(ex);
                 throw new NotImplementedException();
             }
         }

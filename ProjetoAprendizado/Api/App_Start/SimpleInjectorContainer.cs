@@ -1,5 +1,6 @@
 ﻿using BNK.Domain.Contas;
 using BNK.Infra.Data.Infra;
+using BNK.Repository.cs.Repositories;
 using BNK.Repository.Repositories;
 using SimpleInjector;
 using System.Web.Http;
@@ -14,7 +15,7 @@ namespace Api.App_Start
 
             container.Register<IDatabaseConnection, DatabaseConnection>();
             container.Register<IContasRepository, ContasRepository>();
-
+            container.Register<IOperacoesRepository, OperacoesRepository>();
 
             container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
             

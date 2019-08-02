@@ -25,6 +25,7 @@ namespace Api.Controllers
             _contaRepository.Deposita(20);
             return Ok();
         }
+
         // GET: Conta/Details/5
         [HttpGet]
         public IHttpActionResult Details(int id)
