@@ -29,6 +29,7 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.CodeDom.
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.Web.Infrastructure.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Newtonsoft.Json.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\SimpleInjector.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\SimpleInjector.Integration.WebApi.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Net.Http.Formatting.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Web.Helpers.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Web.Http.dll
@@ -51,6 +52,7 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.AI.Windo
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.ApplicationInsights.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\SimpleInjector.xml
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\SimpleInjector.Integration.WebApi.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Web.Helpers.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Web.Mvc.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Web.Optimization.xml
@@ -65,5 +67,3 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Web.Http.We
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\BNK.Api.csprojResolveAssemblyReference.cache
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\Api.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\Api.pdb
-D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\SimpleInjector.Integration.WebApi.dll
-D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\SimpleInjector.Integration.WebApi.xml

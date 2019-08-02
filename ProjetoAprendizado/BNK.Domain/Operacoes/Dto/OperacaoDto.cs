@@ -3,7 +3,7 @@ using System;
 
 namespace BNK.Domain.Operacoes
 {
-    public class OperacaoDto
+    public class OperacaoModal
     {
         public int Num_SeqlOperacao { get; set; }
         public byte Cod_TipoOperacao { get; set; }

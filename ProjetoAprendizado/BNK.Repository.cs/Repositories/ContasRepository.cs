@@ -43,13 +43,13 @@ namespace BNK.Repository.Repositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<OperacaoDto> Operacoes(int conta)
+        public IEnumerable<OperacaoModal> Operacoes(int conta)
         {
             Connect();
             ExecuteProcedure(Procedures.BNK_SelOperacoesCliente.ToString());
             AddParameter("@Num_SeqlConta", 1);
 
-            var operacoes = new List<OperacaoDto>();
+            var operacoes = new List<OperacaoModal>();
 
             using (var leitor = ExecuteReader())
             {
@@ -57,7 +57,7 @@ namespace BNK.Repository.Repositories
                 while (leitor.Read())
                 {
                    
-                    operacoes.Add(new OperacaoDto
+                    operacoes.Add(new OperacaoModal
                     {
                         Num_SeqlOperacao = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlOperacao")),
                         Num_SeqlContaOrigem = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlContaOrigem")),

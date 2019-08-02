@@ -9,7 +9,7 @@ namespace BNK.Domain.Contas
         void Saque(decimal valor);
         void Transfere(decimal valor, int contaDestino);
         void Estorna(int codOperacao);
-        IEnumerable<OperacaoDto> Operacoes(int conta);
+        IEnumerable<OperacaoModal> Operacoes(int conta);
 
     }
 }

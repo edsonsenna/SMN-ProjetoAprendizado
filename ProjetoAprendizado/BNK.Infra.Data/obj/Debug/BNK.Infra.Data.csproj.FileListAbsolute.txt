@@ -2,4 +2,3 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Infra.Data\bin\Debug\B
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Infra.Data\bin\Debug\BNK.Infra.Data.pdb
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Infra.Data\obj\Debug\BNK.Infra.Data.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Infra.Data\obj\Debug\BNK.Infra.Data.pdb
-D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Infra.Data\obj\Debug\BNK.Infra.Data.csprojResolveAssemblyReference.cache

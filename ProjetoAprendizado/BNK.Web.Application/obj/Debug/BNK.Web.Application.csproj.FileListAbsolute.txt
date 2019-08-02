@@ -1,0 +1,11 @@
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\obj\Debug\BNK.Web.Application.csprojResolveAssemblyReference.cache
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\bin\Debug\BNK.Web.Application.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\bin\Debug\BNK.Web.Application.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\bin\Debug\BNK.Domain.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\bin\Debug\Newtonsoft.Json.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\bin\Debug\System.Net.Http.Formatting.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\bin\Debug\BNK.Domain.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\bin\Debug\Newtonsoft.Json.xml
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\bin\Debug\System.Net.Http.Formatting.xml
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\obj\Debug\BNK.Web.Application.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web.Application\obj\Debug\BNK.Web.Application.pdb

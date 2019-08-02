@@ -29,7 +29,7 @@ namespace Api.Controllers
         }
 
         // POST: api/Operacao
-        public IHttpActionResult Post([FromBody]OperacaoDto operacao)
+        public IHttpActionResult Post([FromBody]OperacaoModal operacao)
         {
             _operacaoRepository.Deposita(operacao);
             return BadRequest(operacao.ToString());
