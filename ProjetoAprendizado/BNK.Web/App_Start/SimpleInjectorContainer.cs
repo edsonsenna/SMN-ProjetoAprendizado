@@ -1,7 +1,6 @@
-﻿using BNK.Web.Application.Operacoes;
+﻿using BNK.Web.Application.Contas;
+using BNK.Web.Application.Operacoes;
 using SimpleInjector;
-using SimpleInjector.Integration.Web.Mvc;
-using System.Web.Mvc;
 
 namespace BNK.Web.App_Start
 {
@@ -14,6 +13,8 @@ namespace BNK.Web.App_Start
 
 
             container.Register<OperacaoApplication>();
+
+            container.Register<ContaApplication>();
 
             container.Verify();
 

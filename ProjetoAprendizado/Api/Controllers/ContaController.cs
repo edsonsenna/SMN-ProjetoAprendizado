@@ -16,9 +16,16 @@ namespace Api.Controllers
         // GET: Conta
         public IHttpActionResult Get()
         {
-            return Json(_contaRepository.Operacoes(1));
+            return Ok(_contaRepository.Operacoes(1));
         }
-        
+
+        // GET: Conta/1
+        [HttpGet]
+        public IHttpActionResult GetOperacoes(int id)
+        {
+            return Ok(_contaRepository.Operacoes(1));
+        }
+
         [HttpPost]
         public IHttpActionResult Deposita(int valor)
         {
@@ -28,9 +35,9 @@ namespace Api.Controllers
 
         // GET: Conta/Details/5
         [HttpGet]
-        public IHttpActionResult Details(int id)
+        public IHttpActionResult Details(string id)
         {
-            return Ok();
+            return Ok(_contaRepository.Operacoes(1));
         }
         
 

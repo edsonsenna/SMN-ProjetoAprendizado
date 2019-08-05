@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BNK.Web.Application.Operacoes.Model.OperacaoModel>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_SeqlOperacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cod_TipoOperacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_SeqlContaOrigem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_SeqlContaDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_ValorOperacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_DataOperacao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_SeqlOperacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cod_TipoOperacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_SeqlContaOrigem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_SeqlContaDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_ValorOperacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_DataOperacao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

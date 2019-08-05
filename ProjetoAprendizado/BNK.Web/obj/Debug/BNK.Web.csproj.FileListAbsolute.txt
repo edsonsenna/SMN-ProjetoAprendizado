@@ -59,3 +59,9 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\SimpleInjector
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\SimpleInjector.Integration.Web.Mvc.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\BNK.Web.Application.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\BNK.Web.Application.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Net.Http.Formatting.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Net.Http.Formatting.xml
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Web.Http.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Web.Http.WebHost.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Web.Http.xml
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Web.Http.WebHost.xml

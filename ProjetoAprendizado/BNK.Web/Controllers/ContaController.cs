@@ -1,4 +1,4 @@
-﻿using BNK.Web.Application.Operacoes;
+﻿using BNK.Web.Application.Contas;
 using BNK.Web.Application.Operacoes.Model;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -6,19 +6,21 @@ using System.Web.Mvc;
 
 namespace BNK.Web.Controllers
 {
-    public class HomeController : Controller
+    public class ContaController : Controller
     {
-        private readonly OperacaoApplication _operacaoApplication;
 
-        public HomeController(OperacaoApplication operacaoApplication)
+        private readonly ContaApplication _contaApplication;
+
+        public ContaController(ContaApplication contaApplication)
         {
-            _operacaoApplication = operacaoApplication;
+            _contaApplication = contaApplication;
         }
 
-        public ActionResult Index()
+        // GET: api/Conta/5
+        public ActionResult Index(int id = 1)
         {
-            HttpResponseMessage response = _operacaoApplication.GetOperacoes(1);
-            
+            HttpResponseMessage response = _contaApplication.GetOperacoes(1);
+
 
             if (!response.IsSuccessStatusCode)
             {
@@ -32,6 +34,6 @@ namespace BNK.Web.Controllers
             return View("List", response.Content.ReadAsAsync<List<OperacaoModel>>().Result);
         }
 
-        
+       
     }
 }

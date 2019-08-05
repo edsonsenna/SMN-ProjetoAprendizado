@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contas\ContaApplication.cs" />
+    <Compile Include="Contas\Model\ContaModel.cs" />
     <Compile Include="Operacoes\Model\OperacaoModel.cs" />
     <Compile Include="Operacoes\OperacaoApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

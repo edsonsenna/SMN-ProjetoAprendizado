@@ -26,7 +26,7 @@ namespace Api.Controllers
         public IHttpActionResult Get(int id)
         {
             List<OperacaoDto> operacoes = new List<OperacaoDto>();
-
+            
             operacoes.Add(new OperacaoDto()
             {
                 Cod_TipoOperacao = 2,
