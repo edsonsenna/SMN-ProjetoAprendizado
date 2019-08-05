@@ -228,6 +228,10 @@
       <Project>{3F42E350-11C7-4D15-BD92-4E35CC00428A}</Project>
       <Name>BNK.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BNK.Web.Application\BNK.Web.Application.csproj">
+      <Project>{14C1DC3A-8276-415C-BE32-6FC00FCD5977}</Project>
+      <Name>BNK.Web.Application</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

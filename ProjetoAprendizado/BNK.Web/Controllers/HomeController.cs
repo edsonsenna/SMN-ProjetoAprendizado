@@ -1,30 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using BNK.Web.Application.Operacoes;
 using System.Web.Mvc;
 
 namespace BNK.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private readonly OperacaoApplication _operacaoApplication;
+
+        public HomeController(OperacaoApplication operacaoApplication)
         {
-            return View();
+            _operacaoApplication = operacaoApplication;
         }
 
-        public ActionResult About()
+        public JsonResult Index()
         {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
+            return Json(_operacaoApplication.GetOperacoes(1), JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        
     }
 }

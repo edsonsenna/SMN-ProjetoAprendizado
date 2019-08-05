@@ -3,7 +3,7 @@ using System;
 
 namespace BNK.Web.Application.Operacoes.Model
 {
-    public class OperacaoModal
+    public class OperacaoModel
     {
         public int Num_SeqlOperacao { get; set; }
         public byte Cod_TipoOperacao { get; set; }

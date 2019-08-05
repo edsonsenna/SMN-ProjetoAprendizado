@@ -67,3 +67,5 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Web.Http.We
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\BNK.Api.csprojResolveAssemblyReference.cache
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\Api.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\Api.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Web.Application.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Web.Application.pdb

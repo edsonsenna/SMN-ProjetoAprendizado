@@ -13,7 +13,7 @@ namespace BNK.Repository.cs.Repositories
             BNK_AttOperacao,
            
         }
-        public void Deposita(OperacaoModal operacao)
+        public void Deposita(OperacaoDto operacao)
         {
             bool ins_op = false;
 

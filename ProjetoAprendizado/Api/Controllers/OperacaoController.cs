@@ -23,13 +23,22 @@ namespace Api.Controllers
         }
 
         // GET: api/Operacao/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            List<OperacaoDto> operacoes = new List<OperacaoDto>();
+
+            operacoes.Add(new OperacaoDto()
+            {
+                Cod_TipoOperacao = 2,
+                Num_SeqlContaOrigem = 1,
+                Num_ValorOperacao = 20
+            });
+
+            return Ok(operacoes);
         }
 
         // POST: api/Operacao
-        public IHttpActionResult Post([FromBody]OperacaoModal operacao)
+        public IHttpActionResult Post([FromBody]OperacaoDto operacao)
         {
             _operacaoRepository.Deposita(operacao);
             return BadRequest(operacao.ToString());
