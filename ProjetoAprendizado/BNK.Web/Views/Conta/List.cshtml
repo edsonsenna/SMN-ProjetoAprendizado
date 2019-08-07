@@ -1,40 +1,32 @@
 ﻿@model IEnumerable<BNK.Web.Application.Operacoes.Model.OperacaoModel>
 
+<div class="container">
+    @{ var Num_SeqlConta = @Model.First().Num_SeqlContaOrigem; }
+    @{decimal saldo = 0; }
+    @foreach (var item in Model)
+    {
 
-<!DOCTYPE html>
+        saldo += item.Num_SeqlContaDestino == Num_SeqlConta ? (item.Num_ValorOperacao * -1) : item.Num_ValorOperacao;
+    }
+    <div class="row">
+        <h3>
+            Buscando Operações da Conta Nº @if (Model != null && Model.Any())
+            { @Html.Raw(Num_SeqlConta) }
+        </h3>
+        <h4>
+            Saldo Atual: R$ @Html.Raw(saldo)
+        </h4>
+    </div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>List</title>
-</head>
-<body>
-    <div class="container">
-        @{ var Num_SeqlConta = @Model.First().Num_SeqlContaOrigem; }
-        @{decimal saldo = 0; }
-        @foreach (var item in Model)
-        {
-
-            saldo += item.Num_SeqlContaDestino == Num_SeqlConta ? (item.Num_ValorOperacao * -1) : item.Num_ValorOperacao;
-        }
-        <div class="row">
-            <h3>
-                Buscando Operações da Conta Nº @if (Model != null && Model.Any())
-                { @Html.Raw(Num_SeqlConta) }
-            </h3>
-            <h4>
-                Saldo Atual: R$ @Html.Raw(saldo)
-            </h4>
-        </div>
-
-        <div class="row" style="margin-bottom: 15px">
-            <input type="button"
-                   value="+ Nova Operação"
-                   class="btn btn-success"
-                   onclick="location.href='@Url.Action("NovaOperacao", "Conta", new { Num_SeqlConta = @Num_SeqlConta} )'" />
-        </div>
-        <div class="row">
-            <table class="table">
+    <div class="row" style="margin-bottom: 15px">
+        <input type="button"
+                value="+ Nova Operação"
+                class="btn btn-success"
+                onclick="location.href='@Url.Action("NovaOperacao", "Conta", new { Num_SeqlConta = @Num_SeqlConta} )'" />
+    </div>
+    <div class="row">
+        <table id="TableDados" class="display table">
+            <thead>
                 <tr>
                     <th>
                         #
@@ -54,9 +46,10 @@
                     <th>
                         Data
                     </th>
-                    <th></th>
                 </tr>
-
+            </thead>
+            
+            <tbody>
                 @foreach (var item in Model)
                 {
                 <tr>
@@ -89,15 +82,18 @@
 
                 </tr>
                 }
+            </tbody>
+            
 
-            </table>
+        </table>
 
-        </div>
+    </div>
 
        
         
-    </div>
-
-   
-</body>
-</html>
+</div>
+<script>
+    $(document).ready(function(){
+        $('#TableDados').DataTable();
+    });
+</script>
