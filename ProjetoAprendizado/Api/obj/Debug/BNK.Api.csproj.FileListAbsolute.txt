@@ -18,6 +18,7 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Antlr3.Runtime.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Domain.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Infra.Data.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Repository.cs.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Web.Application.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.AI.Agent.Intercept.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.AI.DependencyCollector.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -44,6 +45,7 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\WebGrease.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Domain.pdb
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Infra.Data.pdb
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Repository.cs.pdb
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Web.Application.pdb
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Antlr3.Runtime.pdb
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.AI.DependencyCollector.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -67,5 +69,3 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\System.Web.Http.We
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\BNK.Api.csprojResolveAssemblyReference.cache
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\Api.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\obj\Debug\Api.pdb
-D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Web.Application.dll
-D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\Api\bin\BNK.Web.Application.pdb

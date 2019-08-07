@@ -23,16 +23,9 @@ namespace Api.Controllers
         [HttpGet]
         public IHttpActionResult GetOperacoes(int id)
         {
-            return Ok(_contaRepository.Operacoes(1));
+            return Ok(_contaRepository.Operacoes(id));
         }
-
-        [HttpPost]
-        public IHttpActionResult Deposita(int valor)
-        {
-            _contaRepository.Deposita(20);
-            return Ok();
-        }
-
+        
         // GET: Conta/Details/5
         [HttpGet]
         public IHttpActionResult Details(string id)

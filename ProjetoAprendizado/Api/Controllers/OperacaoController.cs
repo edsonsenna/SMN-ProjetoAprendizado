@@ -40,8 +40,19 @@ namespace Api.Controllers
         // POST: api/Operacao
         public IHttpActionResult Post([FromBody]OperacaoDto operacao)
         {
-            _operacaoRepository.Deposita(operacao);
-            return BadRequest(operacao.ToString());
+            switch (operacao.Cod_TipoOperacao)
+            {
+                case 1:
+                    _operacaoRepository.Saque(operacao);
+                    break;
+                case 2:
+                    _operacaoRepository.Deposita(operacao);
+                    break;
+                case 3:
+                    _operacaoRepository.Transfere(operacao);
+                    break;
+            }
+            return Ok(operacao);
         }
 
         // PUT: api/Operacao/5

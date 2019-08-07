@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nova Operação</title>
+</head>
+<body>
+    <div>
+        <h2>Nova Operação</h2> 
+    </div>
+    <form action="/Conta/RealizarOperacao" method="POST">
+        <div class="container">
+            <div class="row">
+                <label for="Cod_TipoOperacao">Selecione o tipo de operação</label>
+                <select class="form-control" id="Cod_TipoOperacao" name="Cod_TipoOperacao">
+                    <option value="1">
+                        Saque
+                    </option>
+                    <option value="2">
+                        Depósito
+                    </option>
+                    <option value="3">
+                        Transferência
+                    </option>
+                    <option value="4">
+                        Estorno
+                    </option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="Num_SeqlContaOrigem">Digite número da conta de origem</label>
+                <input class="form-control" id="Num_SeqlContaOrigem" name="Num_SeqlContaOrigem" type="number" placeholder="Digite o número" />
+            </div>
+            <div class="row">
+                <label for="Num_SeqlContaDestino">Digite número da conta de destino</label>
+                <input class="form-control" id="Num_SeqlContaDestino" name="Num_SeqlContaDestino" type="number" placeholder="Digite o número" />
+            </div>
+            <div class="row">
+                <label for="Num_ValorOperacao">Valor da Operação</label>
+                <input class="form-control" id="Num_ValorOperacao" name="Num_ValorOperacao" type="number" placeholder="Digite o valor"/>
+            </div>
+            <div class="row mt-5" style="margin-top: 15px;">
+                <input class="btn btn-success" type="submit" value="Realizar"/>
+            </div>
+        </div>
+       
+        
+       
+        
+        
+    </form>
+</body>
+</html>

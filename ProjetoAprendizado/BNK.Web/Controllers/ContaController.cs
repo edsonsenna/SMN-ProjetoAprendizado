@@ -1,4 +1,5 @@
 ﻿using BNK.Web.Application.Contas;
+using BNK.Web.Application.Operacoes;
 using BNK.Web.Application.Operacoes.Model;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -10,17 +11,24 @@ namespace BNK.Web.Controllers
     {
 
         private readonly ContaApplication _contaApplication;
+        private readonly OperacaoApplication _operacaoApplication;
 
-        public ContaController(ContaApplication contaApplication)
+        public ContaController(ContaApplication contaApplication, OperacaoApplication operacaoApplication)
         {
             _contaApplication = contaApplication;
+            _operacaoApplication = operacaoApplication;
         }
 
-        // GET: api/Conta/5
-        public ActionResult Index(int id = 1)
+        public ActionResult Index()
         {
-            HttpResponseMessage response = _contaApplication.GetOperacoes(1);
+            return View();
+        }
 
+        
+        
+        public ActionResult GetOperacoes(int Num_SeqlConta = 1)
+        {
+            HttpResponseMessage response = _contaApplication.GetOperacoes(Num_SeqlConta);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -33,6 +41,19 @@ namespace BNK.Web.Controllers
             // Json(response.Content.ReadAsStringAsync().Result, JsonRequestBehavior.AllowGet);
             return View("List", response.Content.ReadAsAsync<List<OperacaoModel>>().Result);
         }
+        
+        public ActionResult NovaOperacao()
+        {
+            return View("NovaOperacao");
+        }
+
+        public ActionResult RealizarOperacao(byte Cod_TipoOperacao, int Num_SeqlContaOrigem, int Num_SeqlContaDestino, int Num_ValorOperacao)
+        {
+            _operacaoApplication.InsOperacao(Cod_TipoOperacao, Num_SeqlContaOrigem, Num_SeqlContaDestino, Num_ValorOperacao);
+
+            return RedirectToAction("GetOperacoes", new { Num_SeqlConta = Num_SeqlContaOrigem});
+        }
+        
 
        
     }

@@ -16,10 +16,11 @@ namespace BNK.Web.Application.Contas
 
             client.BaseAddress = new Uri("http://localhost:14788/api/");
 
-            var res = client.GetAsync("Conta/GetOperacoes/1").Result;
+            var res = client.GetAsync("Conta/GetOperacoes/"+id).Result;
 
             return res;
 
         }
+        
     }
 }

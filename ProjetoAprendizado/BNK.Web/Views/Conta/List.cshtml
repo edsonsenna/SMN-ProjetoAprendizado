@@ -9,8 +9,15 @@
     <title>List</title>
 </head>
 <body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
+    
+    <div>
+        <h3>
+            Buscando Operações da Conta => @if (Model != null && Model.Any()) { @Model.First().Num_SeqlContaOrigem }
+        </h3>
+    </div>
+    
+    <p class="btn btn-info">
+        @Html.ActionLink("Nova Operação", "NovaOperacao")
     </p>
     <table class="table">
         <tr>
