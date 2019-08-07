@@ -7,13 +7,19 @@
     <title>Index</title>
 </head>
 <body>
-    <div>
+    
+    <div class="row">
         <h1>Buscar Informações de Conta</h1> 
     </div>
     <div>
         <form action="/Conta/GetOperacoes" method="POST">
-            <input class="form-control" type="number" name="Num_SeqlConta" placeholder="Informe o número da Conta"/>
-            <button type="submit">Buscar</button>
+            <div class="row">
+                <input class="form-control" type="number" name="Num_SeqlConta" placeholder="Informe o número da Conta" />
+            </div>
+            <div class="row" style="margin-top: 15px">
+                <button class="btn btn-success" type="submit">Buscar</button>
+            </div>
+                        
         </form>
     </div>
 </body>

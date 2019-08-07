@@ -42,8 +42,9 @@ namespace BNK.Web.Controllers
             return View("List", response.Content.ReadAsAsync<List<OperacaoModel>>().Result);
         }
         
-        public ActionResult NovaOperacao()
+        public ActionResult NovaOperacao(int Num_SeqlConta = 1)
         {
+            ViewBag.Num_SeqlConta = Num_SeqlConta;
             return View("NovaOperacao");
         }
 
