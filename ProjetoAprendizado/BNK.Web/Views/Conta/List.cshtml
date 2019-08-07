@@ -19,25 +19,33 @@
     <p class="btn btn-info">
         @Html.ActionLink("Nova Operação", "NovaOperacao")
     </p>
+    @{decimal saldo = 0; }
+    @foreach (var item in Model)
+    {
+        saldo += item.Num_ValorOperacao;
+    }
+    <p>
+        Saldo R$ @Html.Raw(saldo)
+    </p>
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Num_SeqlOperacao)
+               #
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cod_TipoOperacao)
+                Cód. Operação
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Num_SeqlContaOrigem)
+                Conta Origem
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Num_SeqlContaDestino)
+                Conta Destino
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Num_ValorOperacao)
+                Valor
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Date_DataOperacao)
+                Data
             </th>
             <th></th>
         </tr>
@@ -48,7 +56,7 @@
                 @Html.DisplayFor(modelItem => item.Num_SeqlOperacao)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cod_TipoOperacao)
+                @Html.DisplayFor(modelItem => item.Nom_TipoOperacao)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Num_SeqlContaOrigem)
@@ -62,11 +70,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Date_DataOperacao)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+           
         </tr>
     }
     

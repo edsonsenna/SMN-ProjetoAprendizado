@@ -38,6 +38,7 @@ namespace BNK.Repository.Repositories
                                                 leitor.GetInt32(leitor.GetOrdinal("Num_SeqlContaDestino")),
                         Num_ValorOperacao = leitor.GetDecimal(leitor.GetOrdinal("Num_ValorOperacao")),
                         Cod_TipoOperacao = leitor.GetByte(leitor.GetOrdinal("Cod_TipoOperacao")),
+                        Nom_TipoOperacao = leitor.GetString(leitor.GetOrdinal("Nom_TipoOperacao")),
                         Date_DataOperacao = leitor.GetDateTime(leitor.GetOrdinal("Date_DataOperacao"))
                     });
                     

@@ -133,7 +133,17 @@ CREATE PROCEDURE [dbo].[BNK_SelOperacoesCliente]
 
 	BEGIN
 	
-		SELECT * FROM [dbo].[BNK_Operacao] WHERE Num_SeqlContaOrigem = @Num_SeqlConta;
+		SELECT 
+			o.Cod_TipoOperacao,
+			o.Num_SeqlContaOrigem,
+			o.Num_SeqlContaDestino,
+			o.Num_ValorOperacao,
+			o.Date_DataOperacao,
+			o.Num_SeqlOperacao,
+			tpo.Nom_TipoOperacao 
+				FROM [dbo].[BNK_Operacao] o
+				INNER JOIN [dbo].[BNK_TipoOperacao] tpo ON tpo.Cod_TipoOperacao = o.Cod_TipoOperacao
+				WHERE o.Num_SeqlContaOrigem = @Num_SeqlConta;
 
 	END
 GO
