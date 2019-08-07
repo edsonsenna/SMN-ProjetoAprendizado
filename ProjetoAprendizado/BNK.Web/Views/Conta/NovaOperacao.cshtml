@@ -1,14 +1,10 @@
-﻿<!DOCTYPE html>
+﻿
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Nova Operação</title>
-</head>
-<body>
+<div class="container">
     <div>
-        <h2>Nova Operação - @ViewBag.Num_SeqlConta</h2> 
+        <h2>Nova Operação - Conta Nº @ViewBag.Num_SeqlConta</h2>
     </div>
+    <input type="hidden" id="Num_SeqlConta" value="@ViewBag.Num_SeqlConta"/>
     <form action="/Conta/RealizarOperacao" method="POST">
         <div class="container">
             <div class="row">
@@ -29,26 +25,56 @@
                 </select>
             </div>
             <div class="row">
-                <label for="Num_SeqlContaOrigem">Digite número da conta de origem</label>
-                <input class="form-control" id="Num_SeqlContaOrigem" name="Num_SeqlContaOrigem" type="number" placeholder="Digite o número" />
+                <label for="Num_SeqlContaOrigem">Conta de origem</label>
+                <input class="form-control" id="Num_SeqlContaOrigem" name="Num_SeqlContaOrigem" 
+                        type="number" placeholder="Digite o número" value="@ViewBag.Num_SeqlConta" readonly/>
             </div>
-            <div class="row">
+            <div id="ContaDestino" class="row">
                 <label for="Num_SeqlContaDestino">Digite número da conta de destino</label>
                 <input class="form-control" id="Num_SeqlContaDestino" name="Num_SeqlContaDestino" type="number" placeholder="Digite o número" />
             </div>
             <div class="row">
                 <label for="Num_ValorOperacao">Valor da Operação</label>
-                <input class="form-control" id="Num_ValorOperacao" name="Num_ValorOperacao" type="number" placeholder="Digite o valor"/>
+                <input class="form-control" id="Num_ValorOperacao" name="Num_ValorOperacao" type="number" placeholder="Digite o valor" />
             </div>
             <div class="row mt-5" style="margin-top: 15px;">
-                <input class="btn btn-success" type="submit" value="Realizar"/>
+                <input class="btn btn-success" type="submit" value="Realizar" />
             </div>
         </div>
-       
-        
-       
-        
-        
+
+
+
+
+
     </form>
-</body>
-</html>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#ContaDestino').hide();
+        $('#Num_SeqlContaDestino').val(0);
+        
+        $('#Cod_TipoOperacao').on('change', function (e) {
+            let op = e.target.value;
+
+            switch (op) {
+                //Saque ou Deposito
+                case '1':
+                case '2':
+                    $('#ContaDestino').hide();
+                    break;
+                case '3':
+                case '4':
+                    $('#ContaDestino').show();
+                    break;
+    
+            }
+
+        });
+        
+    });
+
+    
+
+</script>
+

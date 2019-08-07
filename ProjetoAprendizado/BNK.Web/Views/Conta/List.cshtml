@@ -31,7 +31,7 @@
             <input type="button"
                    value="+ Nova Operação"
                    class="btn btn-success"
-                   onclick="location.href='@Url.Action("NovaOperacao", "Conta" )'" />
+                   onclick="location.href='@Url.Action("NovaOperacao", "Conta", new { Num_SeqlConta = @Num_SeqlConta} )'" />
         </div>
         <div class="row">
             <table class="table">
