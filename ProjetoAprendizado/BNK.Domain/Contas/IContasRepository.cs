@@ -7,5 +7,6 @@ namespace BNK.Domain.Contas
     {
         IEnumerable<OperacaoDto> Operacoes(int conta);
 
+        ContaDto InfoConta(int conta);
     }
 }

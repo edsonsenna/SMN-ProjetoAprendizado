@@ -17,12 +17,19 @@
             Saldo Atual: R$ @Html.Raw(saldo)
         </h4>
     </div>
-
     <div class="row" style="margin-bottom: 15px">
         <input type="button"
-                value="+ Nova Operação"
-                class="btn btn-success"
-                onclick="location.href='@Url.Action("NovaOperacao", "Conta", new { Num_SeqlConta = @Num_SeqlConta} )'" />
+                value="Minhas Informações"
+                class="btn btn-info"
+                onclick="location.href='@Url.Action("InfoConta", "Conta" , new { Num_SeqlConta=@Num_SeqlConta} )'" />
+        
+    </div>
+    <div class="row" style="margin-bottom: 15px">
+        <input type="button"
+                            value="+ Nova Operação"
+                            class="btn btn-success"
+                            onclick="location.href='@Url.Action("NovaOperacao", "Conta" , new { Num_SeqlConta=@Num_SeqlConta} )'" />
+      
     </div>
     <div class="row">
         <table id="TableDados" class="display table">

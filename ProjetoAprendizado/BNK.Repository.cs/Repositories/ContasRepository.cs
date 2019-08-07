@@ -12,7 +12,8 @@ namespace BNK.Repository.Repositories
         
         public enum Procedures
         {
-            BNK_SelOperacoesCliente
+            BNK_SelOperacoesCliente,
+            BNK_SelInfoCliente
         }
 
      
@@ -53,6 +54,32 @@ namespace BNK.Repository.Repositories
             return operacoes;
         }
 
-       
+        public ContaDto InfoConta(int Num_SeqlConta)
+        {
+            Connect();
+            ExecuteProcedure(Procedures.BNK_SelInfoCliente.ToString());
+            AddParameter("@Num_SeqlConta", Num_SeqlConta);
+
+            ContaDto conta = new ContaDto();
+
+            using (var leitor = ExecuteReader())
+            {
+                leitor.Read();
+
+                conta = new ContaDto()
+                {
+                    Num_SeqlConta = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlConta")),
+                    Cod_TipoConta = leitor.GetByte(leitor.GetOrdinal("Cod_TipoConta")),
+                    Nom_ClienteConta = leitor.GetString(leitor.GetOrdinal("Nom_ClienteConta")),
+                    Num_SaldoConta = leitor.GetDecimal(leitor.GetOrdinal("Num_SaldoConta")),
+                    Date_DataCriacao = leitor.GetDateTime(leitor.GetOrdinal("Date_DataCriacao")),
+                    Nom_TipoConta = leitor.GetString(leitor.GetOrdinal("Nom_TipoConta"))
+                };
+
+             
+            }
+
+            return conta;
+        }
     }
 }

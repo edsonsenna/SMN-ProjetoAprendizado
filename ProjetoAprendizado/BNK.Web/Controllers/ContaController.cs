@@ -1,4 +1,5 @@
 ﻿using BNK.Web.Application.Contas;
+using BNK.Web.Application.Contas.Model;
 using BNK.Web.Application.Operacoes;
 using BNK.Web.Application.Operacoes.Model;
 using System.Collections.Generic;
@@ -46,6 +47,22 @@ namespace BNK.Web.Controllers
         {
             ViewBag.Num_SeqlConta = Num_SeqlConta;
             return View("NovaOperacao");
+        }
+
+        public ActionResult InfoConta(int Num_SeqlConta = 1)
+        {
+
+            HttpResponseMessage response = _contaApplication.GetInfo(Num_SeqlConta);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                Response.TrySkipIisCustomErrors = true;
+                Response.StatusCode = 400;
+                return Content(response.Content.ReadAsStringAsync().Result);
+
+            }
+            Response.StatusCode = 200;
+            return View("Edit", response.Content.ReadAsAsync<ContaModel>().Result);
         }
 
         public ActionResult RealizarOperacao(byte Cod_TipoOperacao, int Num_SeqlContaOrigem, int Num_SeqlContaDestino, int Num_ValorOperacao)

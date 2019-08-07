@@ -25,7 +25,13 @@ namespace Api.Controllers
         {
             return Ok(_contaRepository.Operacoes(id));
         }
-        
+
+        [HttpGet]
+        public IHttpActionResult GetInfo(int id)
+        {
+            return Ok(_contaRepository.InfoConta(id));
+        }
+
         // GET: Conta/Details/5
         [HttpGet]
         public IHttpActionResult Details(string id)
