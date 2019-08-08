@@ -1,4 +1,3 @@
-D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\obj\Debug\BNK.Web.csprojResolveAssemblyReference.cache
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\ApplicationInsights.config
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\roslyn\csc.exe
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -23,6 +22,7 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.AI.P
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.AI.Web.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.AI.WindowsServer.dll
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.ApplicationInsights.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.Web.Infrastructure.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Newtonsoft.Json.dll
@@ -51,6 +51,7 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.AI.D
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.AI.Web.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.AI.WindowsServer.xml
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.ApplicationInsights.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Newtonsoft.Json.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\SimpleInjector.xml
@@ -66,7 +67,6 @@ D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Web.Raz
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Web.WebPages.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Web.WebPages.Deployment.xml
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\System.Web.WebPages.Razor.xml
+D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\obj\Debug\BNK.Web.csprojResolveAssemblyReference.cache
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\obj\Debug\BNK.Web.dll
 D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\obj\Debug\BNK.Web.pdb
-D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.ApplicationInsights.dll
-D:\SMN\Aprendizado\Projeto Inicial\ProjetoAprendizado\BNK.Web\bin\Microsoft.ApplicationInsights.xml

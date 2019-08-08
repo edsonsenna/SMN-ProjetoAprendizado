@@ -13,7 +13,8 @@ namespace BNK.Repository.Repositories
         public enum Procedures
         {
             BNK_SelOperacoesCliente,
-            BNK_SelInfoCliente
+            BNK_SelInfoCliente,
+            BNK_AttConta
         }
 
      
@@ -80,6 +81,53 @@ namespace BNK.Repository.Repositories
             }
 
             return conta;
+        }
+
+        public ContaDto AttConta(ContaDto conta)
+        {
+
+            bool ins_op = false;
+
+            Connect();
+            ExecuteProcedure(Procedures.BNK_AttConta.ToString());
+            AddParameter("@Num_SeqlConta", conta.Num_SeqlConta);
+            AddParameter("@Cod_TipoConta", conta.Cod_TipoConta);
+            AddParameter("@Nom_NomeCliente", conta.Nom_ClienteConta);
+
+            ins_op = ExecuteNonQueryWithReturn() == 0 ? true : ins_op;
+
+            if (ins_op)
+            {
+                Connect();
+                ExecuteProcedure(Procedures.BNK_SelInfoCliente.ToString());
+                AddParameter("@Num_SeqlConta", conta.Num_SeqlConta);
+
+                ContaDto conta_Att = new ContaDto();
+
+                using (var leitor = ExecuteReader())
+                {
+                    leitor.Read();
+
+                    conta_Att = new ContaDto()
+                    {
+                        Num_SeqlConta = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlConta")),
+                        Cod_TipoConta = leitor.GetByte(leitor.GetOrdinal("Cod_TipoConta")),
+                        Nom_ClienteConta = leitor.GetString(leitor.GetOrdinal("Nom_ClienteConta")),
+                        Num_SaldoConta = leitor.GetDecimal(leitor.GetOrdinal("Num_SaldoConta")),
+                        Date_DataCriacao = leitor.GetDateTime(leitor.GetOrdinal("Date_DataCriacao")),
+                        Nom_TipoConta = leitor.GetString(leitor.GetOrdinal("Nom_TipoConta"))
+                    };
+
+
+                }
+
+                return conta_Att;
+           
+            }
+
+            return null;
+
+
         }
     }
 }

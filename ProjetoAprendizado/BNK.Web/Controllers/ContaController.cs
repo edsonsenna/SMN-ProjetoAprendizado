@@ -20,8 +20,9 @@ namespace BNK.Web.Controllers
             _operacaoApplication = operacaoApplication;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(string message = null)
         {
+            ViewBag.Message = message;
             return View();
         }
 
@@ -31,16 +32,20 @@ namespace BNK.Web.Controllers
         {
             HttpResponseMessage response = _contaApplication.GetOperacoes(Num_SeqlConta);
 
+            //var size = response.Content.ReadAsAsync<List<OperacaoModel>>().Result.Count;
+
             if (!response.IsSuccessStatusCode)
             {
                 Response.TrySkipIisCustomErrors = true;
                 Response.StatusCode = 400;
-                return Content(response.Content.ReadAsStringAsync().Result);
+                return RedirectToAction("Index", new { message = "Conta Inexistente!" });
 
             }
             Response.StatusCode = 200;
+
             // Json(response.Content.ReadAsStringAsync().Result, JsonRequestBehavior.AllowGet);
-            return View("List", response.Content.ReadAsAsync<List<OperacaoModel>>().Result);
+            List<OperacaoModel> result = response.Content.ReadAsAsync<List<OperacaoModel>>().Result;
+            return View("List", result);
         }
         
         public ActionResult NovaOperacao(int Num_SeqlConta = 1)
@@ -63,6 +68,22 @@ namespace BNK.Web.Controllers
             }
             Response.StatusCode = 200;
             return View("Edit", response.Content.ReadAsAsync<ContaModel>().Result);
+        }
+
+        public ActionResult AttConta(ContaModel conta)
+        {
+            HttpResponseMessage response = _contaApplication.AttConta(conta);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                Response.TrySkipIisCustomErrors = true;
+                Response.StatusCode = 400;
+                return Content(response.Content.ReadAsStringAsync().Result);
+
+            }
+            Response.StatusCode = 200;
+
+            return RedirectToAction("GetOperacoes", new { Num_SeqlConta = conta.Num_SeqlConta });
         }
 
         public ActionResult RealizarOperacao(byte Cod_TipoOperacao, int Num_SeqlContaOrigem, int Num_SeqlContaDestino, int Num_ValorOperacao)

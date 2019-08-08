@@ -58,21 +58,20 @@ namespace Api.Controllers
         }
         
 
-        // POST: Conta/Edit/5
+        // POST: Conta/Edit
         [HttpPost]
         [ActionName("Edit")]
-        public IHttpActionResult EditConfirmed(int id)
+        public IHttpActionResult EditConfirmed(ContaDto conta)
         {
-            try
-            {
-                // TODO: Add update logic here
+            ContaDto conta_Att = _contaRepository.AttConta(conta);
 
-                return Ok();
-            }
-            catch
+            if(conta_Att == null)
             {
-                return Ok();
+                return BadRequest("Não foi possível atualizar a conta!");
             }
+
+            return Ok(conta_Att);
+            
         }
 
         // POST: Conta/Delete/5
