@@ -101,6 +101,10 @@
 </div>
 <script>
     $(document).ready(function(){
-        $('#TableDados').DataTable();
+        $('#TableDados').DataTable( {
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+            }
+        });
     });
 </script>

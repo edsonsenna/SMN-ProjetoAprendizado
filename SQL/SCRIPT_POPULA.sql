@@ -1,5 +1,11 @@
 BEGIN TRANSACTION
 
+	INSERT INTO SMN_Bank.dbo.BNK_Usuario
+		VALUES ('edsonsjr', 'esj123', GETDATE());
+
+	IF @@ERROR <> 0
+		ROLLBACK;
+
 	INSERT INTO SMN_Bank.dbo.BNK_TipoConta
 		VALUES	(1, 'POUPANÇA'),
 				(2, 'CONTA CORRENTE');
@@ -8,8 +14,8 @@ BEGIN TRANSACTION
 		ROLLBACK;
 
 	INSERT INTO SMN_Bank.dbo.BNK_Conta
-		VALUES	('EDSON', 0, 1, GETDATE()),
-				('LUCAS', 0, 2, GETDATE());
+		VALUES	('EDSON', 0, 1, 1, GETDATE()),
+				('LUCAS', 0, 2, 1, GETDATE());
 
 	IF @@ERROR <> 0
 		ROLLBACK;

@@ -53,6 +53,8 @@
     <Compile Include="Operacoes\Model\OperacaoModel.cs" />
     <Compile Include="Operacoes\OperacaoApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios\Model\UsuarioModel.cs" />
+    <Compile Include="Usuarios\UsuarioApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BNK.Domain\BNK.Domain.csproj">
@@ -63,6 +65,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

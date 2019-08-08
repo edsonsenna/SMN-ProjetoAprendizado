@@ -44,6 +44,7 @@
     <Compile Include="Repositories\ContasRepository.cs" />
     <Compile Include="Repositories\OperacoesRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\UsuariosRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BNK.Domain\BNK.Domain.csproj">
