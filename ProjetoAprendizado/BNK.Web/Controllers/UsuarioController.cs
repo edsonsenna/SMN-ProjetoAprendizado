@@ -1,5 +1,7 @@
-﻿using BNK.Web.Application.Usuarios;
+﻿using BNK.Web.Application.Contas.Model;
+using BNK.Web.Application.Usuarios;
 using BNK.Web.Application.Usuarios.Model;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Web.Mvc;
 
@@ -28,18 +30,21 @@ namespace BNK.Web.Controllers
             };
 
             HttpResponseMessage response = _usuarioApplication.GetAcesso(usuario);
-
             if (!response.IsSuccessStatusCode)
-            {
+            { 
                 Response.TrySkipIisCustomErrors = true;
                 Response.StatusCode = 400;
-                return Content(response.Content.ReadAsStringAsync().Result);
+                return View("AcessoNegado");
 
             }
             Response.StatusCode = 200;
-            UsuarioModel usr = response.Content.ReadAsAsync<UsuarioModel>().Result;
+            List<ContaModel> result = response.Content.ReadAsAsync<List<ContaModel>>().Result;
 
-            return RedirectToAction("GetOperacoes", "Conta", new { Num_SeqlConta = 1 });
+            int id_conta = -1;
+
+            if (result.Count != 0) id_conta = result[0].Num_SeqlConta;
+            
+            return RedirectToAction("GetOperacoes", "Conta", new { Num_SeqlConta = id_conta, Contas_Usr = result });
         }
 
         

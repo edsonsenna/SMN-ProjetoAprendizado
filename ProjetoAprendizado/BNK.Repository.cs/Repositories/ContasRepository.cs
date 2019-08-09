@@ -71,10 +71,10 @@ namespace BNK.Repository.Repositories
                 {
                     Num_SeqlConta = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlConta")),
                     Cod_TipoConta = leitor.GetByte(leitor.GetOrdinal("Cod_TipoConta")),
-                    Nom_ClienteConta = leitor.GetString(leitor.GetOrdinal("Nom_ClienteConta")),
                     Num_SaldoConta = leitor.GetDecimal(leitor.GetOrdinal("Num_SaldoConta")),
                     Date_DataCriacao = leitor.GetDateTime(leitor.GetOrdinal("Date_DataCriacao")),
-                    Nom_TipoConta = leitor.GetString(leitor.GetOrdinal("Nom_TipoConta"))
+                    Nom_TipoConta = leitor.GetString(leitor.GetOrdinal("Nom_TipoConta")),
+                    Nom_NomeUsuar = leitor.GetString(leitor.GetOrdinal("Nom_NomeUsuar"))
                 };
 
              
@@ -92,7 +92,6 @@ namespace BNK.Repository.Repositories
             ExecuteProcedure(Procedures.BNK_AttConta.ToString());
             AddParameter("@Num_SeqlConta", conta.Num_SeqlConta);
             AddParameter("@Cod_TipoConta", conta.Cod_TipoConta);
-            AddParameter("@Nom_NomeCliente", conta.Nom_ClienteConta);
 
             ins_op = ExecuteNonQueryWithReturn() == 0 ? true : ins_op;
 
@@ -112,7 +111,7 @@ namespace BNK.Repository.Repositories
                     {
                         Num_SeqlConta = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlConta")),
                         Cod_TipoConta = leitor.GetByte(leitor.GetOrdinal("Cod_TipoConta")),
-                        Nom_ClienteConta = leitor.GetString(leitor.GetOrdinal("Nom_ClienteConta")),
+                        Nom_NomeUsuar = leitor.GetString(leitor.GetOrdinal("Nom_NomeUsuar")),
                         Num_SaldoConta = leitor.GetDecimal(leitor.GetOrdinal("Num_SaldoConta")),
                         Date_DataCriacao = leitor.GetDateTime(leitor.GetOrdinal("Date_DataCriacao")),
                         Nom_TipoConta = leitor.GetString(leitor.GetOrdinal("Nom_TipoConta"))

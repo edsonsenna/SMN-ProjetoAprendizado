@@ -28,7 +28,7 @@ namespace BNK.Web.Controllers
 
         
         
-        public ActionResult GetOperacoes(int Num_SeqlConta = 1)
+        public ActionResult GetOperacoes(int Num_SeqlConta = 1, List<ContaModel> contas = null)
         {
             HttpResponseMessage response = _contaApplication.GetOperacoes(Num_SeqlConta);
 
@@ -45,6 +45,7 @@ namespace BNK.Web.Controllers
 
             // Json(response.Content.ReadAsStringAsync().Result, JsonRequestBehavior.AllowGet);
             List<OperacaoModel> result = response.Content.ReadAsAsync<List<OperacaoModel>>().Result;
+            ViewBag.Contas_Usr = contas;
             return View("List", result);
         }
         

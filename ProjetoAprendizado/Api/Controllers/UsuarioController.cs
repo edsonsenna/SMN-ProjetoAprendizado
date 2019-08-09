@@ -45,14 +45,14 @@ namespace Api.Controllers
         [ActionName("Acesso")]
         public IHttpActionResult Acesso(UsuarioDto usuario)
         {
-            int response = _usuarioRepository.Acesso(usuario);
+            var response = _usuarioRepository.Acesso(usuario);
 
-            if (response != 0)
+            if (response == null)
             {
                 return BadRequest("Não foi possível realizar o login!");
             }
 
-            return Ok(usuario);
+            return Ok(response);
 
         }
     }

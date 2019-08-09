@@ -25,6 +25,18 @@
         
     </div>
     <div class="row" style="margin-bottom: 15px">
+        @if(ViewBag.Contas_Usr != null){
+            <select>
+                @foreach( var item in ViewBag.Contas_Usr){
+                    <option value="item.Num_SeqlConta">item.Num_SeqlConta + "/" + item.Nom_NomeUsaur</option>
+                }
+            </select>
+            
+        }
+
+    </div>
+    
+    <div class="row" style="margin-bottom: 15px">
         <input type="button"
                             value="+ Nova Operação"
                             class="btn btn-success"

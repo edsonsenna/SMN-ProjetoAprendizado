@@ -1,9 +1,11 @@
-﻿using BNK.Domain.Usuarios.Dto;
+﻿using BNK.Domain.Contas;
+using BNK.Domain.Usuarios.Dto;
+using System.Collections.Generic;
 
 namespace BNK.Domain.Usuarios
 {
     public interface IUsuariosRepository
     {
-        int Acesso(UsuarioDto usuario);
+        List<ContaDto> Acesso(UsuarioDto usuario);
     }
 }
