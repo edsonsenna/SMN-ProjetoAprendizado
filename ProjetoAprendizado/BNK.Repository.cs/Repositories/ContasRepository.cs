@@ -74,7 +74,8 @@ namespace BNK.Repository.Repositories
                     Num_SaldoConta = leitor.GetDecimal(leitor.GetOrdinal("Num_SaldoConta")),
                     Date_DataCriacao = leitor.GetDateTime(leitor.GetOrdinal("Date_DataCriacao")),
                     Nom_TipoConta = leitor.GetString(leitor.GetOrdinal("Nom_TipoConta")),
-                    Nom_NomeUsuar = leitor.GetString(leitor.GetOrdinal("Nom_NomeUsuar"))
+                    Nom_NomeUsuar = leitor.GetString(leitor.GetOrdinal("Nom_NomeUsuar")),
+                    Num_SeqlUsuar = leitor.GetInt32(leitor.GetOrdinal("Num_SeqlUsuar"))
                 };
 
              

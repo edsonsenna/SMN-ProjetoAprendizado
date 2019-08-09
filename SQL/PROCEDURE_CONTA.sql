@@ -28,9 +28,12 @@ CREATE PROCEDURE [dbo].[BNK_SelInfoCliente]
 			i.Num_SaldoConta,
 			i.Num_SeqlConta,
 			i.Date_DataCriacao,
-			tpc.Nom_TipoConta
+			i.Num_SeqlUsuar,
+			tpc.Nom_TipoConta,
+			u.Nom_NomeUsuar
 			FROM [dbo].[BNK_Conta] i
 			INNER JOIN [dbo].[BNK_TipoConta] tpc ON tpc.Cod_TipoConta = i.Cod_TipoConta
+			INNER JOIN [dbo].[BNK_Usuario] u ON u.Num_SeqlUsuar = i.Num_SeqlUsuar
 			WHERE i.Num_SeqlConta = @Num_SeqlConta
 
 	END
