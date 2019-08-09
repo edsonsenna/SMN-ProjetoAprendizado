@@ -49,8 +49,7 @@ GO
 CREATE PROCEDURE [dbo].[BNK_AttConta]
 
 	@Num_SeqlConta INT,
-	@Cod_TipoConta TINYINT,
-	@Nom_NomeCliente VARCHAR(150)
+	@Cod_TipoConta TINYINT
 
 	AS
 
@@ -66,8 +65,7 @@ CREATE PROCEDURE [dbo].[BNK_AttConta]
 
 	BEGIN
 		UPDATE [dbo].BNK_Conta 
-			SET Cod_TipoConta = @Cod_TipoConta,
-				Nom_ClienteConta = @Nom_NomeCliente
+			SET Cod_TipoConta = @Cod_TipoConta
 			WHERE Num_SeqlConta = @Num_SeqlConta;
 
 		RETURN 0;
@@ -75,5 +73,5 @@ CREATE PROCEDURE [dbo].[BNK_AttConta]
 	END
 GO
 
-EXEC [dbo].[BNK_AttConta] 1, 1, "EDSON JUNIOR"
+EXEC [dbo].[BNK_AttConta] 1, 1
 
